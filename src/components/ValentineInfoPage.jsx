@@ -3,7 +3,7 @@ import React, { useState ,useRef} from 'react'
 import {useSelector,useDispatch} from "react-redux"
 import {addUser} from "../redux/feature/user/userSlice.js" 
 import { useNavigate } from 'react-router-dom'
-import "../style/ValentinePage.css"
+import "../style/valentinePage.css"
 
 const ValentineInfoPage = ()=>{
 
