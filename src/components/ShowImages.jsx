@@ -8,10 +8,17 @@ const ShowImages = ()=>{
     
     const navigate = useNavigate();
     
+    if(userData?.userImg){
+      localStorage.setItem("images",JSON.stringify({"userImg":userData.userImg,"valentineImg":userData.valentineImg}));
+    }
+    let localImg = localStorage.getItem("images")?JSON.parse(localStorage.getItem("images")):null;
+   
     useEffect(()=>{
-        if(!userData.userImg||!userData.valentineImg){
+        if(!localImg){
             navigate("/");
+            
         }
+        
     },[])
     function title(name){
       if(!name){
@@ -39,7 +46,7 @@ const ShowImages = ()=>{
           <div className="blossom-container"></div>
           <h1 className="greetings">Happy Valentines Day</h1>
           <h2 className="title">💖 {title(userData.userName)} & {title(userData.valentineName)} 💖</h2>
-          <HeartShape userImg={userData.userImg} valentineImg={userData.valentineImg}/>
+          <HeartShape userImg={localImg?.userImg} valentineImg={localImg?.valentineImg}/>
           <h3 className="message">
             {
               userData.gender ===  "male"
