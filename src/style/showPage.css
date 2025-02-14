@@ -3,9 +3,9 @@
     position: relative;
     max-width: 600px;
     padding: 20px;
-    margin:20px auto;
+    margin:-10px auto 100px;
     color:#800020;
-    overflow: hidden;
+    /* overflow: hidden; */
     background: #FDFDFD; 
     display: flex;
     align-items: center;
@@ -15,12 +15,17 @@
   .greetings{
     font-weight:800;
     font-size:30px;
-    margin:5px auto;
+    margin: 0;
+    text-align: center;
+  }
+  .title{
+    color: #94253f;
+    font-size: 30px;
+    font-weight: 900;
   }
   .heart-container {
     max-width:450px;
     display: flex;
-    border:1px solid black;
     flex-direction: column;
     justify-content: center;
     align-items: center;

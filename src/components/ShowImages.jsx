@@ -38,7 +38,7 @@ const ShowImages = ()=>{
         <div className="result-container">
           <div className="blossom-container"></div>
           <h1 className="greetings">Happy Valentines Day</h1>
-          <h2>💖 {title(userData.userName)} & {title(userData.valentineName)} 💖</h2>
+          <h2 className="title">💖 {title(userData.userName)} & {title(userData.valentineName)} 💖</h2>
           <HeartShape userImg={userData.userImg} valentineImg={userData.valentineImg}/>
           <h3 className="message">
             {
